@@ -277,7 +277,7 @@ public class MainActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode,
                                            @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
-
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_LOCATION_PERMISSION) {
             if (grantResults.length <= 0) {
                 Log.d("onRequestPermissionsResult", "Request was canceled");
@@ -301,7 +301,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
     }
 
     private boolean checkLocationPermission() {
